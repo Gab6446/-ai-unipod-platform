@@ -1,0 +1,14 @@
+{
+  "name": "ai-unipod-platform",
+  "version": "1.0.0",
+  "description": "UNILAG AI UNIPOD Platform",
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "npm run start --prefix server",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
