@@ -1,10 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BentoSection from './components/BentoSection';
 import FacilitiesSection from './components/FacilitiesSection';
+import GallerySection from './components/GallerySection';
 import ProjectsShowcase from './components/ProjectsShowcase';
+import BlogSection from './components/BlogSection';
 import SubmitProject from './components/SubmitProject';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 const Footer = () => (
   <footer className="site-footer">
@@ -32,16 +37,16 @@ const Footer = () => (
           <h4 className="footer-links__heading">Platform</h4>
           <ul className="footer-links">
             <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#projects">Showcase</a></li>
             <li><a href="#proposals">Submit Project</a></li>
-            <li><a href="#">How It Works</a></li>
           </ul>
         </div>
 
         <div className="footer-links-group">
           <h4 className="footer-links__heading">Resources</h4>
           <ul className="footer-links">
-            <li><a href="#">Brand Guidelines</a></li>
+            <li><a href="/blog">Blog &amp; News</a></li>
             <li><a href="#">Research Portal</a></li>
             <li><a href="#">Facility Manuals</a></li>
             <li><a href="#">Alumni Network</a></li>
@@ -69,17 +74,29 @@ const Footer = () => (
   </footer>
 );
 
+const HomePage = () => (
+  <main className="min-h-screen">
+    <Navbar />
+    <Hero />
+    <BentoSection />
+    <FacilitiesSection />
+    <GallerySection />
+    <ProjectsShowcase />
+    <BlogSection />
+    <SubmitProject />
+    <Footer />
+  </main>
+);
+
 function App() {
   return (
-    <main className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <BentoSection />
-      <FacilitiesSection />
-      <ProjectsShowcase />
-      <SubmitProject />
-      <Footer />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
