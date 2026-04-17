@@ -148,6 +148,90 @@ img {
 }
 
 /* ===========================
+   UNDP TOP BAR
+=========================== */
+.undp-topbar {
+  background: var(--blue);
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.undp-topbar__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.undp-topbar__left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.undp-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.undp-topbar__link {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: var(--transition-fast);
+}
+
+.undp-topbar__link:hover {
+  color: white;
+}
+
+.undp-topbar__divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(255,255,255,0.25);
+}
+
+@media (max-width: 640px) {
+  .undp-topbar__right { display: none; }
+  .undp-topbar__left span { display: none; }
+}
+
+/* ── UNDP badge in brand ── */
+.navbar-brand__undp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  border: 1px solid rgba(4,104,177,0.2);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  margin-left: 0.25rem;
+}
+
+.navbar-brand__undp-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+/* ===========================
    NAVBAR
 =========================== */
 .navbar-root {
@@ -369,7 +453,7 @@ img {
   min-height: 98vh;
   display: flex;
   align-items: center;
-  padding-top: 6rem;
+  padding-top: 8.5rem;
   overflow: hidden;
   background-color: var(--bg-warm);
 }
@@ -518,6 +602,19 @@ img {
   transform: translateY(-2px);
 }
 
+/* UNDP Blue secondary variant */
+.hero-btn-secondary--blue {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+
+.hero-btn-secondary--blue:hover {
+  background: #035495;
+  border-color: #035495;
+  box-shadow: 0 8px 24px rgba(4, 104, 177, 0.3);
+}
+
 .hero-stats-row {
   display: flex;
   gap: 2.5rem;
@@ -546,6 +643,12 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--blue);
+}
+
+.hero-stat-item__icon--blue {
+  background: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid rgba(4,104,177,0.15);
 }
 
 /* Visuals */
@@ -2093,8 +2196,37 @@ img {
 .site-footer {
   background: #0F0505;
   color: rgba(255,255,255,0.75);
-  padding: 5rem 0 2.5rem;
+  padding: 0 0 2.5rem;
+  border-top: 4px solid var(--blue);
 }
+
+.footer-undp-stripe {
+  background: linear-gradient(90deg, var(--blue) 0%, #035495 100%);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.footer-undp-stripe__text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.8);
+}
+
+.footer-undp-stripe__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+}
+
+
 
 .footer-grid {
   display: grid;

@@ -57,7 +57,7 @@ const Hero = () => {
             <button className="hero-btn-primary">
               Explore Facilities <ArrowRight size={18} />
             </button>
-            <button className="hero-btn-secondary">
+            <button className="hero-btn-secondary hero-btn-secondary--blue">
               <Rocket size={18} /> Submit Project
             </button>
           </motion.div>
@@ -69,15 +69,15 @@ const Hero = () => {
             className="hero-stats-row"
           >
             <div className="hero-stat-item">
-              <div className="hero-stat-item__icon"><ShieldCheck size={16} /></div>
+              <div className="hero-stat-item__icon hero-stat-item__icon--blue"><ShieldCheck size={16} /></div>
               <span>UNDP Accredited</span>
             </div>
             <div className="hero-stat-item">
-              <div className="hero-stat-item__icon"><Zap size={16} /></div>
+              <div className="hero-stat-item__icon hero-stat-item__icon--blue"><Zap size={16} /></div>
               <span>24/7 Access</span>
             </div>
             <div className="hero-stat-item">
-              <div className="hero-stat-item__icon"><Globe size={16} /></div>
+              <div className="hero-stat-item__icon hero-stat-item__icon--blue"><Globe size={16} /></div>
               <span>Remote Ready</span>
             </div>
           </motion.div>

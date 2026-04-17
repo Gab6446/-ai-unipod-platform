@@ -13,6 +13,17 @@ import BlogPostPage from './pages/BlogPostPage';
 
 const Footer = () => (
   <footer className="site-footer">
+    {/* UNDP Blue Partnership Stripe */}
+    <div className="footer-undp-stripe">
+      <span className="footer-undp-stripe__dot" />
+      <span className="footer-undp-stripe__text">United Nations Development Programme</span>
+      <span className="footer-undp-stripe__dot" />
+      <span className="footer-undp-stripe__text">·</span>
+      <span className="footer-undp-stripe__dot" />
+      <span className="footer-undp-stripe__text">In Partnership with the University of Lagos</span>
+      <span className="footer-undp-stripe__dot" />
+    </div>
+
     <div className="container">
       <div className="footer-grid">
         <div className="footer-brand">

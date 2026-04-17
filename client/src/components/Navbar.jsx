@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Calendar } from 'lucide-react';
+import { Menu, X, Calendar, Globe } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +16,27 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar-root ${scrolled ? 'navbar-root--scrolled' : ''}`}>
+
+      {/* ── UNDP Top Bar ── */}
+      <div className="undp-topbar">
+        <div className="undp-topbar__inner">
+          <div className="undp-topbar__left">
+            <Globe size={12} />
+            <span>United Nations Development Programme (UNDP) Partner Institution</span>
+          </div>
+          <div className="undp-topbar__right">
+            <a href="https://www.undp.org" target="_blank" rel="noreferrer" className="undp-topbar__link">
+              undp.org ↗
+            </a>
+            <span className="undp-topbar__divider" />
+            <a href="https://www.unilag.edu.ng" target="_blank" rel="noreferrer" className="undp-topbar__link">
+              unilag.edu.ng ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Main Navbar ── */}
       <div className="navbar-inner">
         {/* Brand */}
         <Link to="/" className="navbar-brand">
@@ -23,6 +44,10 @@ const Navbar = () => {
           <div className="navbar-brand__text">
             <span className="navbar-brand__name">AI UNIPOD</span>
             <span className="navbar-brand__sub">University of Lagos</span>
+          </div>
+          <div className="navbar-brand__undp-badge">
+            <span className="navbar-brand__undp-dot" />
+            UNDP
           </div>
         </Link>
 
