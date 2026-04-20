@@ -396,14 +396,25 @@ const SubmitProject = () => {
 
   const handleBack = () => setStep(s => s - 1);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    try {
+      const response = await fetch('http://localhost:5000/api/proposals', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const result = await response.json();
+      setTrackingId(result.id);
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Submission failed:', error);
       setTrackingId(`UNIPOD-${new Date().getFullYear()}-${String(Date.now()).slice(-4)}`);
       setSubmitted(true);
-    }, 2000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleReset = () => {

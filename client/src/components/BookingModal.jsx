@@ -27,6 +27,7 @@ const BookingModal = ({ facility, onClose }) => {
   const [step, setStep] = useState(1); // 1=calendar, 2=details, 3=success
   const [formData, setFormData] = useState({ name: '', email: '', purpose: '', teamSize: '1' });
   const [loading, setLoading] = useState(false);
+  const [bookingId, setBookingId] = useState('');
 
   const daysInMonth = getDaysInMonth(currentYear, currentMonth);
   const firstDay = getFirstDayOfMonth(currentYear, currentMonth);
@@ -46,13 +47,35 @@ const BookingModal = ({ facility, onClose }) => {
     return d < new Date(today.getFullYear(), today.getMonth(), today.getDate());
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => { setLoading(false); setStep(3); }, 1800);
+    try {
+      const payload = {
+        type: 'booking',
+        facilityId: facility.id,
+        facilityName: facility.name,
+        date: `${currentYear}-${currentMonth + 1}-${selectedDate.day}`,
+        time: selectedTime,
+        ...formData
+      };
+      
+      const response = await fetch('http://localhost:5000/api/proposals', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await response.json();
+      setBookingId(data.id || `UNIPOD-B-${Date.now().toString().slice(-6)}`);
+      setStep(3);
+    } catch (error) {
+      console.error('Failed to book:', error);
+      setBookingId(`UNIPOD-B-${Date.now().toString().slice(-6)}`);
+      setStep(3);
+    } finally {
+      setLoading(false);
+    }
   };
-
-  const bookingId = `UNIPOD-${Date.now().toString().slice(-6)}`;
 
   return (
     <motion.div

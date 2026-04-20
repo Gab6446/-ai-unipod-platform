@@ -8,7 +8,7 @@ export const blogPosts = [
     id: 1,
     slug: 'undp-partnership-what-it-means',
     title: 'What the UNDP Partnership Means for UNILAG Students',
-    excerpt: 'The UN Development Programme's backing of AI UNIPOD unlocks funding, mentorship, and a global network for Nigerian university innovators. Here is what that means in practice.',
+    excerpt: 'The UN Development Programme\'s backing of AI UNIPOD unlocks funding, mentorship, and a global network for Nigerian university innovators. Here is what that means in practice.',
     content: `
 The announcement of AI UNIPOD's formal partnership with the United Nations Development Programme (UNDP) is more than a press statement. It is a structural shift in how students and researchers at the University of Lagos can access global resources to solve local problems.
 
@@ -43,7 +43,7 @@ Submit your proposal through the AI UNIPOD portal and indicate "UNDP Grant Track
     id: 2,
     slug: 'robotics-lab-semester-recap',
     title: 'Robotics Lab Spring Semester Recap: 14 Projects, 3 Awards',
-    excerpt: 'From autonomous delivery drones to a hydroponic monitoring system, AI UNIPOD's Robotics Lab had its most productive semester yet. Here are the highlights.',
+    excerpt: 'From autonomous delivery drones to a hydroponic monitoring system, AI UNIPOD\'s Robotics Lab had its most productive semester yet. Here are the highlights.',
     content: `
 Spring 2026 saw the Robotics & AI Lab host 14 concurrent student projects — a record that stretched our equipment roster but produced some extraordinary results.
 
@@ -75,7 +75,7 @@ Bookings are already filling up for the summer term. Reserve your slot early.
     id: 3,
     slug: 'how-to-write-a-winning-proposal',
     title: 'How to Write a Winning AI UNIPOD Project Proposal',
-    excerpt: 'Most rejected proposals share one flaw: they describe what they want to build, not why it matters. Dr. Okafor breaks down the review board's evaluation criteria.',
+    excerpt: 'Most rejected proposals share one flaw: they describe what they want to build, not why it matters. Dr. Okafor breaks down the review board\'s evaluation criteria.',
     content: `
 Each semester, we receive dozens of project proposals. Roughly 40% are approved. The difference between a successful submission and a rejected one often comes down to a single, frequently overlooked element: **problem specificity**.
 
@@ -114,7 +114,7 @@ Use the structured form on our portal — it's designed to guide you through eac
     id: 4,
     slug: 'creators-studio-media-projects',
     title: 'The Creators Studio Is Now Equipped for Professional Media Production',
-    excerpt: 'New lighting, a podcast recording bay, and a green screen installation make the Creators Studio the go-to space for UNILAG's content creators and media students.',
+    excerpt: 'New lighting, a podcast recording bay, and a green screen installation make the Creators Studio the go-to space for UNILAG\'s content creators and media students.',
     content: `
 The AI UNIPOD Creators Studio has completed a major equipment upgrade, making it one of the most capable media production spaces on any Nigerian campus.
 
@@ -148,7 +148,7 @@ const categoryColors = {
   'Partnership': { bg: '#E8F5E9', color: '#2D7D46' },
   'Lab Updates': { bg: '#E3F2FD', color: '#1565C0' },
   'Guides':      { bg: 'var(--gold-light)', color: '#7A5400' },
-  'Facility News': { bg: 'var(--maroon-light)', color: 'var(--maroon)' },
+  'Facility News': { bg: 'var(--blue-light)', color: 'var(--blue)' },
 };
 
 export const BlogCard = ({ post, featured = false }) => {

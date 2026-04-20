@@ -10,6 +10,7 @@ import BlogSection from './components/BlogSection';
 import SubmitProject from './components/SubmitProject';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
+import AdminPortal from './pages/AdminPortal';
 
 const Footer = () => (
   <footer className="site-footer">
@@ -106,6 +107,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
+        <Route path="/admin" element={<><Navbar /><AdminPortal /><Footer /></>} />
       </Routes>
     </BrowserRouter>
   );

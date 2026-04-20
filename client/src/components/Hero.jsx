@@ -12,8 +12,8 @@ const Hero = () => {
       {/* Subtly watermarked background pattern */}
       <div className="hero-watermark">
         <svg width="400" height="400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 5L95 50L50 95L5 50L50 5Z" stroke="var(--maroon)" strokeWidth="0.5" strokeOpacity="0.1" />
-          <circle cx="50" cy="50" r="30" stroke="var(--maroon)" strokeWidth="0.5" strokeOpacity="0.1" />
+          <path d="M50 5L95 50L50 95L5 50L50 5Z" stroke="var(--blue)" strokeWidth="0.5" strokeOpacity="0.12" />
+          <circle cx="50" cy="50" r="30" stroke="var(--maroon)" strokeWidth="0.5" strokeOpacity="0.08" />
         </svg>
       </div>
 
