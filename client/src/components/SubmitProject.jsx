@@ -6,6 +6,7 @@ import {
   ChevronLeft, BookOpen, Cpu, Leaf, Banknote, Globe,
   GraduationCap, ArrowUpRight
 } from 'lucide-react';
+import './proposal.css';
 
 /* ─── Data ───────────────────────────────────── */
 const CATEGORIES = [
@@ -429,7 +430,7 @@ const SubmitProject = () => {
   };
 
   return (
-    <section id="proposals" className="proposal-section">
+    <section id="proposals" className="proposal-page">
       {/* Background decoration */}
       <div className="proposal-bg-deco" aria-hidden="true">
         <div className="proposal-bg-deco__circle proposal-bg-deco__circle--1" />
@@ -437,66 +438,67 @@ const SubmitProject = () => {
       </div>
 
       <div className="container">
-        <div className="proposal-layout">
+        {/* ── Top Hero & Benefits Split ── */}
+        <div className="proposal-hero-split">
+          {/* ── Left 40% Text ── */}
+          <div className="proposal-hero-text">
+            <span className="section-eyebrow">Academic Portal</span>
+            <h2 className="proposal-hero-title">
+              Bring Your <em className="serif italic">Research</em> to Life.
+            </h2>
+            <p className="proposal-hero-desc">
+              Submit your innovation proposal from anywhere — whether you're on campus or
+              researching remotely from Abuja. AI UNIPOD connects you with the people and
+              tools to take your idea further.
+            </p>
+            
+            <a href="#submit-form" className="proposal-btn-cta">
+              Submit Proposal <ArrowUpRight size={18} />
+            </a>
 
-          {/* ── Left panel ── */}
-          <div className="proposal-left">
-            <div className="proposal-left__sticky">
-              <span className="section-eyebrow">Academic Portal</span>
-              <h2 className="section-title proposal-left__title">
-                Bring Your <em className="serif italic">Research</em> to Life.
-              </h2>
-              <p className="proposal-left__desc">
-                Submit your innovation proposal from anywhere — whether you're on campus or
-                researching remotely from Abuja. AI UNIPOD connects you with the people and
-                tools to take your idea further.
-              </p>
-
-              {/* Benefits */}
-              <ul className="proposal-benefits">
-                {BENEFITS.map((b, i) => {
-                  const Icon = b.icon;
-                  return (
-                    <motion.li
-                      key={i}
-                      className="proposal-benefit"
-                      initial={{ opacity: 0, x: -16 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.1 }}
-                    >
-                      <div className="proposal-benefit__icon">
-                        <Icon size={18} />
-                      </div>
-                      <div>
-                        <h4 className="proposal-benefit__title">{b.title}</h4>
-                        <p className="proposal-benefit__desc">{b.desc}</p>
-                      </div>
-                    </motion.li>
-                  );
-                })}
-              </ul>
-
-              {/* Trust badges */}
-              <div className="proposal-trust">
-                <div className="proposal-trust__badge">
-                  <FileText size={13} /> UNDP Affiliated
-                </div>
-                <div className="proposal-trust__badge">
-                  <GraduationCap size={13} /> UNILAG Accredited
-                </div>
-                <div className="proposal-trust__badge">
-                  <Globe size={13} /> Remote-Friendly
-                </div>
+            {/* Trust badges */}
+            <div className="proposal-trust" style={{ display: 'flex', gap: '1rem', marginTop: '2rem', flexWrap: 'wrap' }}>
+              <div className="proposal-trust__badge" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                <FileText size={14} /> UNDP Affiliated
+              </div>
+              <div className="proposal-trust__badge" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                <GraduationCap size={14} /> UNILAG Accredited
+              </div>
+              <div className="proposal-trust__badge" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                <Globe size={14} /> Remote-Friendly
               </div>
             </div>
           </div>
+          {/* ── Right 60% Benefits Grid ── */}
+          <div className="proposal-benefits-grid">
+            {BENEFITS.map((b, i) => {
+              const Icon = b.icon;
+              return (
+                <motion.div
+                  key={i}
+                  className="proposal-benefit-card"
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <div className="proposal-benefit-card__icon">
+                    <Icon size={24} />
+                  </div>
+                  <h4 className="proposal-benefit-card__title">{b.title}</h4>
+                  <p className="proposal-benefit-card__desc">{b.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
 
-          {/* ── Right panel: Form ── */}
-          <motion.div
-            className="proposal-form-card"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
+        {/* ── Bottom Form Section ── */}
+        <motion.div
+          id="submit-form"
+          className="proposal-form-section"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
             <AnimatePresence mode="wait">
@@ -548,8 +550,7 @@ const SubmitProject = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
