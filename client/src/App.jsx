@@ -11,6 +11,8 @@ import SubmitProject from './components/SubmitProject';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
 import AdminPortal from './pages/AdminPortal';
+import AboutPage from './pages/AboutPage';
+import BookingPage from './pages/BookingPage';
 
 const Footer = () => (
   <footer className="site-footer">
@@ -28,8 +30,9 @@ const Footer = () => (
     <div className="container">
       <div className="footer-grid">
         <div className="footer-brand">
-          <div className="footer-logo">
-            <div className="footer-logo__mark">A</div>
+          <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <img src="/Images/unilag-logo.png" alt="UNILAG Logo" style={{ height: '36px', width: 'auto' }} />
+            <img src="/Images/undp-logo.png" alt="UNDP Logo" style={{ height: '38px', width: 'auto' }} />
             <div>
               <span className="footer-logo__name">AI UNIPOD</span>
               <span className="footer-logo__sub">UNDP · University of Lagos</span>
@@ -93,7 +96,6 @@ const HomePage = () => (
     <BentoSection />
     <FacilitiesSection />
     <GallerySection />
-    <ProjectsShowcase />
     <BlogSection />
     <SubmitProject />
     <Footer />
@@ -105,6 +107,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/booking" element={<BookingPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/admin" element={<><Navbar /><AdminPortal /><Footer /></>} />

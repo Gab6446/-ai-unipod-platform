@@ -37,7 +37,7 @@ Submit your proposal through the AI UNIPOD portal and indicate "UNDP Grant Track
     readTime: '5 min',
     category: 'Partnership',
     featured: true,
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=1200',
+    image: '/Images/TNF-22.jpg',
   },
   {
     id: 2,
@@ -69,7 +69,7 @@ Bookings are already filling up for the summer term. Reserve your slot early.
     readTime: '4 min',
     category: 'Lab Updates',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200',
+    image: '/Images/TNF-23.jpg',
   },
   {
     id: 3,
@@ -108,7 +108,7 @@ Use the structured form on our portal — it's designed to guide you through eac
     readTime: '6 min',
     category: 'Guides',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=1200',
+    image: '/Images/TNF-24.jpg',
   },
   {
     id: 4,
@@ -140,7 +140,7 @@ Priority is given to registered clubs and faculty-supervised projects. Personal 
     readTime: '3 min',
     category: 'Facility News',
     featured: false,
-    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80&w=1200',
+    image: '/Images/TNF-25.jpg',
   },
 ];
 
@@ -222,8 +222,9 @@ const BlogSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
+              style={{ height: '100%' }}
             >
-              <BlogCard post={post} featured={i === 0} />
+              <BlogCard post={post} featured={false} />
             </motion.div>
           ))}
         </div>

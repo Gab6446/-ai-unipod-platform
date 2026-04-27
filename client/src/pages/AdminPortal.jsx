@@ -9,7 +9,8 @@ const AdminPortal = () => {
 
   const fetchSubmissions = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/proposals');
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const res = await fetch(`${API_URL}/api/proposals`);
       const data = await res.json();
       setSubmissions(data);
     } catch (err) {
@@ -25,7 +26,8 @@ const AdminPortal = () => {
 
   const updateStatus = async (id, status) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/proposals/${id}`, {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const res = await fetch(`${API_URL}/api/proposals/${id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status })

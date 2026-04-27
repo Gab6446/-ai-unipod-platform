@@ -1,8 +1,23 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Rocket, ArrowRight, ShieldCheck, Zap, Globe } from 'lucide-react';
 
+const spaces = [
+  { name: 'Maker Space', desc: 'Equipped with state-of-the-art soldering stations and prototyping kits.' },
+  { name: 'Design Space', desc: 'Industrial 3D printers, laser cutters, and high-end workstations.' },
+  { name: 'VR Space', desc: 'Dedicated virtual reality environment with headsets and tracking sensors.' },
+  { name: 'Training Room', desc: 'Flexible classroom-style space equipped for workshops and group learning.' }
+];
+
 const Hero = () => {
+  const [currentSpace, setCurrentSpace] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSpace(prev => (prev + 1) % spaces.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <section className="hero-section">
       {/* Background Decorative Elements */}
@@ -91,8 +106,8 @@ const Hero = () => {
         >
           <div className="hero-visual__main">
             <img 
-              src="https://images.unsplash.com/photo-1581092162384-8987c1794ed9?auto=format&fit=crop&q=80&w=2070" 
-              alt="Innovation Hub" 
+              src="/Images/TNF-1.jpg" 
+              alt="AI UNIPOD Innovation Hub" 
               className="hero-visual__img"
             />
             <div className="hero-visual__overlay" />
@@ -108,20 +123,23 @@ const Hero = () => {
                 Featured Lab
               </div>
               <div className="floating-card__body">
-                <h4 className="serif">Robotics & AI Center</h4>
-                <p>Equipped with state-of-the-art sensory arrays and automation kits.</p>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentSpace}
+                    initial={{ opacity: 0, y: 5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <h4 className="serif">{spaces[currentSpace].name}</h4>
+                    <p>{spaces[currentSpace].desc}</p>
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </motion.div>
           </div>
 
-          {/* Smaller secondary image / element */}
-          <div className="hero-visual__secondary">
-             <div className="visual-secondary__accent" />
-             <div className="visual-secondary__content">
-                <span className="serif">50+ Projects</span>
-                <p>Active this semester</p>
-             </div>
-          </div>
+          {/* Removed secondary card per user request */}
         </motion.div>
       </div>
     </section>

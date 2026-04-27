@@ -4,12 +4,12 @@ import { X, Calendar, Clock, Users, CheckCircle, ChevronLeft, ChevronRight } fro
 
 const DAYS_OF_WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const TIME_SLOTS = [
-  '8:00 AM', '9:00 AM', '10:00 AM', '11:00 AM',
-  '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM',
-  '4:00 PM', '5:00 PM', '6:00 PM'
+  '9:00 AM - 12:00 PM',
+  '12:00 PM - 3:00 PM',
+  '3:00 PM - 6:00 PM'
 ];
 // Mock some slots as occupied
-const OCCUPIED = ['9:00 AM', '11:00 AM', '2:00 PM'];
+const OCCUPIED = ['12:00 PM - 3:00 PM'];
 
 function getDaysInMonth(year, month) {
   return new Date(year, month + 1, 0).getDate();
@@ -60,7 +60,8 @@ const BookingModal = ({ facility, onClose }) => {
         ...formData
       };
       
-      const response = await fetch('http://localhost:5000/api/proposals', {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${API_URL}/api/proposals`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

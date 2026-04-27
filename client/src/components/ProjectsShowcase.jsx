@@ -129,7 +129,7 @@ const ProjectsShowcase = () => {
           <div>
             <span className="section-eyebrow">Innovation Showcase</span>
             <h2 className="section-title">
-              Ideas Born at <span className="serif italic">AI UNIPOD.</span>
+              Our <span className="serif italic">Projects.</span>
             </h2>
             <p className="section-subtitle">
               Browse active initiatives, research breakthroughs, and community-driven projects shaping the future of African innovation.

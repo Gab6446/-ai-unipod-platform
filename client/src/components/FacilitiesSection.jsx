@@ -7,72 +7,52 @@ const facilitiesData = [
   {
     id: 1,
     number: '01',
-    name: 'Robotics & AI Lab',
-    description: 'Arduino kits, soldering stations, Raspberry Pi clusters, and specialized hardware for prototyping robotics and AI solutions.',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070',
-    capacity: 15,
-    icon: Cpu,
-    tags: ['Arduino', 'Soldering', 'AI Hardware'],
+    name: 'Conference Room',
+    description: 'Professional boardroom setup with 4K display and video conferencing for team meetings and presentations.',
+    image: '/Images/TNF-2.jpg',
+    capacity: 16,
+    icon: Wifi,
+    tags: ['Meetings', 'Presentations', 'Video Call'],
   },
   {
     id: 2,
     number: '02',
-    name: 'Creators Studio',
-    description: 'High-end podcasting equipment, video editing suites, and acoustic treatment for content creators and media researchers.',
-    image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=2070',
-    capacity: 6,
-    icon: Mic,
-    tags: ['Podcast', 'Video Editing', 'Acoustic'],
+    name: 'Training Room',
+    description: 'Flexible classroom-style space equipped for workshops, seminars, and group learning sessions.',
+    image: '/Images/TNF-3.jpg',
+    capacity: 30,
+    icon: Users,
+    tags: ['Workshops', 'Seminars', 'Learning'],
   },
   {
     id: 3,
     number: '03',
-    name: 'Design & 3D Lab',
-    description: 'Industrial 3D printers, laser cutters, and the full Adobe Creative Suite for product designers and engineers.',
-    image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=2070',
-    capacity: 12,
-    icon: Monitor,
-    tags: ['3D Printing', 'Laser Cut', 'Adobe Suite'],
+    name: 'Maker Space',
+    description: 'A hands-on workspace with tools, soldering stations, and materials for physical prototyping and hardware building.',
+    image: '/Images/TNF-4.jpg',
+    capacity: 20,
+    icon: Cpu,
+    tags: ['Prototyping', 'Hardware', 'DIY'],
   },
   {
     id: 4,
     number: '04',
-    name: 'Think-Tank Room',
-    description: 'Floor-to-ceiling whiteboards and modular furniture designed for high-intensity brainstorming and ideation sessions.',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070',
-    capacity: 20,
-    icon: Zap,
-    tags: ['Whiteboard', 'Collaboration', 'Ideation'],
+    name: 'Design Space',
+    description: 'Industrial 3D printers, laser cutters, and high-end workstations for product designers and digital artists.',
+    image: '/Images/TNF-5.jpg',
+    capacity: 12,
+    icon: Monitor,
+    tags: ['3D Printing', 'Laser Cut', 'Design Software'],
   },
   {
     id: 5,
     number: '05',
-    name: 'Workstation Hub',
-    description: 'Rows of high-performance computers with dual monitors, ergonomic chairs, and power outlets at every seat for solo focus work.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2070',
-    capacity: 30,
-    icon: Monitor,
-    tags: ['Computers', 'Focus', 'High-Speed WiFi'],
-  },
-  {
-    id: 6,
-    number: '06',
-    name: 'Conference Suite',
-    description: 'Boardroom-style setup with 4K display, video conferencing system, and whiteboard rails for hybrid team meetings and presentations.',
-    image: 'https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?auto=format&fit=crop&q=80&w=2070',
-    capacity: 16,
-    icon: Wifi,
-    tags: ['4K Display', 'Video Call', 'Presentations'],
-  },
-  {
-    id: 7,
-    number: '07',
-    name: 'Printing & Media Room',
-    description: 'Professional-grade A3/A4 color printers, plotters, and binding machines for research papers, posters, and physical prototypes.',
-    image: 'https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?auto=format&fit=crop&q=80&w=2070',
-    capacity: 8,
-    icon: Printer,
-    tags: ['Color Print', 'Plotter', 'Binding'],
+    name: 'VR Space',
+    description: 'Dedicated virtual reality environment with headsets and tracking sensors for immersive experiences and development.',
+    image: '/Images/TNF-6.jpg',
+    capacity: 6,
+    icon: Zap,
+    tags: ['Virtual Reality', 'Immersive', 'Simulation'],
   },
 ];
 
@@ -113,6 +93,9 @@ const FacilityCard = ({ facility, onBook }) => {
 
 const FacilitiesSection = () => {
   const [bookingFacility, setBookingFacility] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedFacilities = showAll ? facilitiesData : facilitiesData.slice(0, 4);
 
   return (
     <section id="facilities" className="facilities-section">
@@ -130,10 +113,22 @@ const FacilitiesSection = () => {
         </div>
 
         <div className="facilities-grid">
-          {facilitiesData.map((facility) => (
+          {displayedFacilities.map((facility) => (
             <FacilityCard key={facility.id} facility={facility} onBook={setBookingFacility} />
           ))}
         </div>
+
+        {facilitiesData.length > 4 && (
+          <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
+            <button 
+              className="btn-outline-blue" 
+              onClick={() => setShowAll(!showAll)}
+              style={{ cursor: 'pointer' }}
+            >
+              {showAll ? 'Show Less' : 'See More Spaces'}
+            </button>
+          </div>
+        )}
       </div>
 
       {bookingFacility && (
