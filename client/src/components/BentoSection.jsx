@@ -67,29 +67,7 @@ const ClockCard = () => {
   );
 };
 
-// Card C — Stats
-const StatsCard = () => (
-  <motion.div className="bento-card bento-card--stats" whileHover={{ y: -4 }}>
-    <div className="bento-card__content">
-      <div className="bento-tag bento-tag--gold">
-        <Star size={11} /> Impact Numbers
-      </div>
-      <div className="bento-stats__grid">
-        {[
-          { value: '50+', label: 'Active Projects' },
-          { value: '7', label: 'Creative Spaces' },
-          { value: '200+', label: 'UNILAG Members' },
-          { value: '12', label: 'Events / Year' },
-        ].map((s) => (
-          <div key={s.label} className="bento-stat">
-            <span className="bento-stat__value">{s.value}</span>
-            <span className="bento-stat__label">{s.label}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </motion.div>
-);
+// Removed StatsCard per user request
 
 // Card D — Facilities mini-showcase
 const FacilitiesCard = () => {
@@ -140,45 +118,7 @@ const SubmitCard = () => (
   </motion.div>
 );
 
-// Card F — Approved projects ticker
-const ApprovedCard = () => {
-  const projects = [
-    'SolarEdu — Off-Grid Learning Platform',
-    'AgroSense — Smart Farm Monitor',
-    'LagosTrack — Urban Mobility Intelligence',
-    'MediBot — Community Health Assistant',
-  ];
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => setIdx((i) => (i + 1) % projects.length), 3000);
-    return () => clearInterval(id);
-  }, []);
-  return (
-    <motion.div className="bento-card bento-card--approved" whileHover={{ y: -4 }}>
-      <div className="bento-card__content">
-        <div className="bento-tag bento-tag--green">
-          <CheckCircle size={11} /> Latest Approved
-        </div>
-        <div className="bento-approved__ticker">
-          <motion.p
-            key={idx}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            className="bento-approved__text"
-          >
-            {projects[idx]}
-          </motion.p>
-        </div>
-        <div className="bento-approved__progress">
-          {projects.map((_, i) => (
-            <div key={i} className={`bento-dot ${i === idx ? 'active' : ''}`} />
-          ))}
-        </div>
-      </div>
-    </motion.div>
-  );
-};
+// Removed ApprovedCard per user request
 
 // Card G — Quote / culture card
 const QuoteCard = () => (
@@ -217,8 +157,6 @@ const BentoSection = () => {
         >
           <motion.div variants={cardVariants} className="bento-area bento-area--book"><BookCard /></motion.div>
           <motion.div variants={cardVariants} className="bento-area bento-area--clock"><ClockCard /></motion.div>
-          <motion.div variants={cardVariants} className="bento-area bento-area--approved"><ApprovedCard /></motion.div>
-          <motion.div variants={cardVariants} className="bento-area bento-area--stats"><StatsCard /></motion.div>
           <motion.div variants={cardVariants} className="bento-area bento-area--facilities"><FacilitiesCard /></motion.div>
           <motion.div variants={cardVariants} className="bento-area bento-area--submit"><SubmitCard /></motion.div>
           <motion.div variants={cardVariants} className="bento-area bento-area--quote"><QuoteCard /></motion.div>
