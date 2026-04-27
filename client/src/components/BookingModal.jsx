@@ -4,12 +4,12 @@ import { X, Calendar, Clock, Users, CheckCircle, ChevronLeft, ChevronRight } fro
 
 const DAYS_OF_WEEK = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const TIME_SLOTS = [
-  '9:00 AM - 12:00 PM',
-  '12:00 PM - 3:00 PM',
-  '3:00 PM - 6:00 PM'
+  '09:00 AM', '10:00 AM', '11:00 AM',
+  '12:00 PM', '01:00 PM', '02:00 PM',
+  '03:00 PM', '04:00 PM', '05:00 PM'
 ];
 // Mock some slots as occupied
-const OCCUPIED = ['12:00 PM - 3:00 PM'];
+const OCCUPIED = ['11:00 AM', '02:00 PM'];
 
 function getDaysInMonth(year, month) {
   return new Date(year, month + 1, 0).getDate();
