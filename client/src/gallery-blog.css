@@ -14,7 +14,7 @@
 }
 
 .gallery-filter-btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.5rem 1.2rem;
@@ -97,7 +97,7 @@
 }
 
 .gallery-item__cat {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -169,7 +169,7 @@
 
 .lightbox-category {
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -185,7 +185,7 @@
   bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.75rem;
   color: rgba(255,255,255,0.5);
 }
@@ -223,7 +223,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--blue);
@@ -275,7 +275,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -288,7 +288,7 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.72rem;
   color: var(--text-muted);
 }
@@ -324,7 +324,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -332,7 +332,7 @@
 
 .blog-card__author-name {
   display: block;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -341,7 +341,7 @@
 
 .blog-card__author-role {
   display: block;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.65rem;
   color: var(--text-muted);
   line-height: 1.2;
@@ -351,7 +351,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--blue);
@@ -395,7 +395,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--text-secondary);
@@ -416,7 +416,7 @@
 
 .blog-featured__label {
   display: inline-block;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -463,7 +463,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -489,7 +489,7 @@
 }
 
 .blog-featured__author { display: flex; align-items: center; gap: 0.75rem; color: var(--text-primary); font-weight: 600; font-size: 0.85rem; }
-.blog-featured__read { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--text-muted); font-family: 'Poppins', sans-serif; }
+.blog-featured__read { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--text-muted); font-family: 'Plus Jakarta Sans', sans-serif; }
 
 .blog-list-section { padding: 4rem 0 7rem; }
 
@@ -511,7 +511,7 @@
   background: var(--bg-white);
   border: 1.5px solid var(--border-medium);
   border-radius: var(--radius-full);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.85rem;
   color: var(--text-primary);
   outline: none;
@@ -576,7 +576,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 0.8rem;
   color: rgba(255,255,255,0.65);
 }
@@ -584,7 +584,7 @@
 .blog-post-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; padding-top: 4rem; }
 
 .prose {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.05rem;
   line-height: 1.85;
   color: var(--text-secondary);
@@ -593,8 +593,8 @@
 }
 
 .prose p { margin-bottom: 1.5rem; }
-.prose h2 { font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: var(--text-primary); margin: 3rem 0 1rem; line-height: 1.2; }
-.prose h3 { font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin: 2rem 0 0.75rem; }
+.prose h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.8rem; color: var(--text-primary); margin: 3rem 0 1rem; line-height: 1.2; }
+.prose h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin: 2rem 0 0.75rem; }
 .prose strong { font-weight: 700; color: var(--text-primary); }
 .prose em { font-style: italic; color: var(--blue); }
 .prose ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
@@ -603,13 +603,13 @@
 .blog-post-aside { display: flex; flex-direction: column; gap: 1.5rem; padding-top: 4rem; }
 
 .blog-aside-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm); }
-.blog-aside-card h4 { font-family: 'Poppins', sans-serif; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1rem; }
+.blog-aside-card h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 1rem; }
 .blog-aside-author { display: flex; align-items: center; gap: 1rem; }
 .blog-aside-author__avatar { width: 3rem; height: 3rem; font-size: 1.1rem; }
 .blog-aside-author strong { display: block; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 0.2rem; }
 .blog-aside-author p { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
 .blog-aside-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-.blog-aside-links a { font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--blue); transition: var(--transition-fast); }
+.blog-aside-links a { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--blue); transition: var(--transition-fast); }
 .blog-aside-links a:hover { color: var(--blue-dark); }
 
 .blog-related { padding: 5rem 0 7rem; border-top: 1px solid var(--border); }
