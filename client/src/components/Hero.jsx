@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Background Decorative Elements */}
       <div className="hero-bg-accent hero-bg-accent--1" />
       <div className="hero-bg-accent hero-bg-accent--2" />
-      
+
       {/* Subtly watermarked background pattern */}
       <div className="hero-watermark">
         <svg width="400" height="400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,7 @@ const Hero = () => {
 
       <div className="container hero-container">
         <div className="hero-content">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -43,8 +43,8 @@ const Hero = () => {
             <span className="hero-badge__dot" />
             <span className="hero-badge__text">Empowering UNILAG Innovators</span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -53,8 +53,8 @@ const Hero = () => {
             Where <span className="hero-title__accent">Heritage</span> Meets <br />
             <span className="serif italic">Digital Innovation.</span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -63,7 +63,7 @@ const Hero = () => {
             AI UNIPOD provides students and researchers at the University of Lagos with world-class facilities, robotics labs, and a transparent platform to turn ideas into impact.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -77,7 +77,7 @@ const Hero = () => {
             </button>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -105,15 +105,15 @@ const Hero = () => {
           className="hero-visual"
         >
           <div className="hero-visual__main">
-            <img 
-              src="/Images/TNF-1.jpg" 
-              alt="AI UNIPOD Innovation Hub" 
+            <img
+              src="/Images/TNF-1.jpg"
+              alt="AI UNIPOD Innovation Hub"
               className="hero-visual__img"
             />
             <div className="hero-visual__overlay" />
-            
+
             {/* Floating Glass Piece */}
-            <motion.div 
+            <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="hero-visual__floating-card glass"

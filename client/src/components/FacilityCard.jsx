@@ -4,17 +4,17 @@ import { Users, Wifi, Cpu, ArrowUpRight } from 'lucide-react';
 
 const FacilityCard = ({ id, number, name, image, capacity, features, description }) => {
   return (
-    <motion.div 
+    <motion.div
       whileHover={{ y: -10 }}
       className="group relative h-[450px] w-full rounded-2xl overflow-hidden cursor-pointer shadow-lg"
     >
       {/* Background Image */}
-      <img 
-        src={image} 
-        alt={name} 
+      <img
+        src={image}
+        alt={name}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
-      
+
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
 
@@ -32,7 +32,7 @@ const FacilityCard = ({ id, number, name, image, capacity, features, description
           <p className="text-sm opacity-80 line-clamp-2 mb-4 font-light leading-relaxed transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
             {description}
           </p>
-          
+
           <div className="flex items-center gap-6 pt-4 border-t border-white/20">
             <div className="flex items-center gap-2 text-xs uppercase tracking-wider font-bold">
               <Users size={14} className="text-[var(--unilag-gold)]" />

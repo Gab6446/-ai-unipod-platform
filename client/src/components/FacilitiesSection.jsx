@@ -120,8 +120,8 @@ const FacilitiesSection = () => {
 
         {facilitiesData.length > 4 && (
           <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
-            <button 
-              className="btn-outline-blue" 
+            <button
+              className="btn-outline-blue"
               onClick={() => setShowAll(!showAll)}
               style={{ cursor: 'pointer' }}
             >

@@ -451,7 +451,7 @@ const SubmitProject = () => {
               researching remotely from Abuja. AI UNIPOD connects you with the people and
               tools to take your idea further.
             </p>
-            
+
             <a href="#submit-form" className="proposal-btn-cta">
               Submit Proposal <ArrowUpRight size={18} />
             </a>

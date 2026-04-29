@@ -788,25 +788,25 @@ img {
     gap: 6rem;
     text-align: center;
   }
-  
+
   .hero-content {
     align-items: center;
   }
-  
+
   .hero-actions, .hero-stats-row {
     justify-content: center;
   }
-  
+
   .hero-visual {
     justify-content: center;
   }
-  
+
   .hero-visual__floating-card {
     left: 20px;
     transform: none;
     bottom: -30px;
   }
-  
+
   .hero-visual__secondary {
     right: 20px;
     top: -30px;
@@ -817,19 +817,19 @@ img {
   .hero-section {
     padding-top: 4rem;
   }
-  
+
   .hero-title {
     font-size: 3rem;
   }
-  
+
   .hero-visual__main {
     height: 480px;
   }
-  
+
   .hero-visual__floating-card {
     width: 280px;
   }
-  
+
   .hero-stats-row {
     flex-direction: column;
     gap: 1.5rem;
