@@ -3219,7 +3219,7 @@ img {
   position: relative;
 }
 .bp-equipment-list li::before {
-  content: '→';
+  content: '\2192';
   position: absolute;
   left: 0;
   color: var(--blue);
